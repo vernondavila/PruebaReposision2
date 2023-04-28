@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include "funciones.h"
 
 using namespace std;
 
@@ -25,14 +26,23 @@ int main(int argc, char const *argv[])
             cin >> monto;
             cout << "Ingrese la operadora(Tigo o Claro)";
             cin >> operadora;
-            
-
-
+            registrarVenta(monto, operadora);
             break;
+        case 2:
+                mostrarTotalVenta();
+                break;
+        case 3:
+                mostrarTotalVentaPorOperadora();
+                break;
+        case 4:
+                seguir = false;
+                break;
         
         default:
+         cout << "Opcion invalida" << endl;
             break;
         }
+        cout << endl;
 
 
     }
